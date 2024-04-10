@@ -28,7 +28,6 @@ export default function About() {
                         <p className="mb-4 leading-relaxed">
                             I have always enjoyed frontend web development and have recently found myself drawn to UX/UI work.<br />
                             At the moment, I am excited to be reacquainting myself with the frontend side of things - turning my focus to modern front-end technologies and design principles.
-                            I'm eager to draw on my diverse skillset, and my resourcefulness, to create meaningful solutions in a frontend or fullstack role (or a backend role, if I am enthusiastic about the company/work)!
                         </p>
                         <p className="mb-4 leading-relaxed">
                             I'm eager to draw on my diverse skillset, and my resourcefulness, to create meaningful solutions in a frontend or fullstack role (or a backend role, if I am enthusiastic about the company/work)!
