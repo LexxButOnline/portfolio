@@ -7,11 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "background-main": "url('/texture.png')",
-      },
-      backgroundSize: {
-        'scaled': '100%',
+      colors: {
+        primary: '#000000',
+        secondary: '#219EBC',
+        tertiary: '#FFB703',
+        fontcolor: '#EBEBEB',
       }
     },
   },

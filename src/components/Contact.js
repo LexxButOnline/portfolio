@@ -31,8 +31,8 @@ export default function Contact() {
 
     return (
         <section id="contact" className="relative">
-            <div className="container mx-auto mt-10 p-10  bg-opacity-80 bg-teal-600 rounded-xl">
-                <div className="bg-teal-700 text-neutral-200 rounded-xl flex p-6 md:flex-row flex-col gap-2">
+            <div className="container mx-auto mt-10  bg-primary border-secondary border-4 rounded-sm">
+                <div className="flex p-6 md:flex-row flex-col gap-2">
 
                     <div className="basis-1/2  p-6 place-content-center">
                         <div className="flex">
@@ -74,7 +74,7 @@ export default function Contact() {
                                 type="text"
                                 id="name"
                                 name="name"
-                                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-primary focus:ring-2 focus:ring-secondary text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                                 onChange={(e) => setName(e.target.value)}
                             />
                         </div>
@@ -86,7 +86,7 @@ export default function Contact() {
                                 type="email"
                                 id="email"
                                 name="email"
-                                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-primary focus:ring-2 focus:ring-secondary text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
@@ -99,13 +99,13 @@ export default function Contact() {
                             <textarea
                                 id="message"
                                 name="message"
-                                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-primary focus:ring-2 focus:ring-secondary h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                                 onChange={(e) => setMessage(e.target.value)}
                             />
                         </div>
                         <button
                             type="submit"
-                            className="text-neutral-200 bg-gray-900 py-2 px-6 focus:outline-none hover:bg-teal-950 rounded text-lg">
+                            className="bg-gray-800 border border-gray-700 py-2 px-6 focus:border-1 focus:border-white hover:bg-secondary hover:text-primary hover:ring-1 hover:ring-white rounded text-lg">
                             Submit
                         </button>
                     </form>
