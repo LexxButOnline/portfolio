@@ -1,23 +1,47 @@
 import React from "react";
+// import Intro from "@/components/Intro";
+import { motion, Variants } from "framer-motion";
 
+const textVariants: Variants = {
+    offscreen: {
+        visibility: "hidden",
+        opacity: 0
+    },
+    onscreen: {
+        visibility: "visible",
+        opacity: 1,
+        transition: {
+            duration: 0.5,
+            delay: 0.1
+        },
+    }
+};
 
 export default function About() {
     return (
         <section id="about">
-            <div className="container mx-auto flex  md:flex-row flex-col gap-2 bg-primary rounded-sm  border-secondary border-4 ">
+            {/* <Intro /> */}
+            <div className="container mx-auto flex mt-80  md:flex-row flex-col gap-2 rounded-sm  border-secondary border-4 ">
                 <div className="bg-secondary basis-1/3 ">
-                    <img
-                        className="object-cover object-center scale-75"
-                        alt="hero"
-                        src="./lexxtoon.png"
-                    />
+                    <motion.div initial="offscreen"
+                        whileInView="onscreen"
+                        viewport={{ once: true, amount: "all" }} variants={textVariants}
+                    >      <img
+                            className="object-cover object-center scale-75"
+                            alt="hero"
+                            src="./lexxtoon.png"
+                        />
+                    </motion.div>
                 </div>
                 <div className="basis-2/3 rounded-sm py-8 px-10 flex">
                     <div className="m-auto">
-                        <h1 className="title-font sm:text-4xl text-3xl mb-6 font-medium">
-                            Hi.
-                            <br />I'm Lexx.
-                        </h1>
+
+
+                        Hi. I'm Lexx
+
+                        {/* <h1 className="inline-block mb-6">
+                            <Anim />
+                        </h1> */}
                         <p className="mb-4 leading-relaxed">
                             I'm a software developer with 10 years of experience in Java development within the insurance industry.
                         </p >

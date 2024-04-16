@@ -10,7 +10,7 @@ export default function Contact() {
     const [email, setEmail] = React.useState("");
     const [message, setMessage] = React.useState("");
 
-    function encode(data) {
+    function encode(data: any) {
         return Object.keys(data)
             .map(
                 (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
@@ -18,7 +18,7 @@ export default function Contact() {
             .join("&");
     }
 
-    function handleSubmit(e) {
+    function handleSubmit(e: any) {
         e.preventDefault();
         fetch("/", {
             method: "POST",
@@ -56,7 +56,6 @@ export default function Contact() {
                     </div>
 
                     <form
-                        netlify
                         name="contact"
                         onSubmit={handleSubmit}
                         className="basis-1/2 px-4 py-2">

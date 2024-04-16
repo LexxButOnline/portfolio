@@ -9,5 +9,5 @@ export default function Footer() {
                 Thank you!
             </div>
         </section >
-    )
+    );
 }

@@ -5,3 +5,11 @@
 a {
     @apply underline hover:text-teal-950
  }
+ html {
+    background-color: theme(colors.primary);
+    color: theme(colors.fontcolor);
+  }
+  p {
+    margin-top: 20px;
+    margin-bottom:20px;
+  }
