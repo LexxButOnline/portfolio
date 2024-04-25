@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -64,9 +65,9 @@ export default function Contact() {
                             <h2 className=" text-4xl font-medium title-font">
                                 Contact Me
                             </h2>
-                            <div className="mt-1 mb-5 font-medium text-lg">
+                            <p className="mt-1 mb-5 font-medium text-lg">
                                 <span className="text-tertiary mr-2"><FontAwesomeIcon size="lg" icon={faCode} /></span>Let's build  something <span className=" underline decoration-secondary decoration-2 font-bold">amazing</span> together!
-                            </div>
+                            </p>
                             <div className="relative mb-4">
                                 <label htmlFor="name" className="leading-7 text-sm ">
                                     Name
