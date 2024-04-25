@@ -1,12 +1,14 @@
 'use client'
 import React from "react";
-// import About from "@/components/About";
-// import Contact from "@/components/Contact";
+
 // import Footer from "@/components/Footer";
-// import Intro from "@/components/Intro";
-// import Anim from "@/components/Anim";
-// import Parallax from "@/components/Parallax";
-import Pagey from "@/components/Pagey";
+import Navbar from "@/components/Navbar";
+import Intro from "@/components/Intro";
+// import About from "@/components/About";
+import Abootle from "@/components/Abootle";
+import Contact from "@/components/Contact";
+
+
 
 
 
@@ -14,13 +16,13 @@ import Pagey from "@/components/Pagey";
 export default function Page() {
   return (
     <main>
-      {/* <Intro />
-      < About />
+      < Navbar />
+      < Intro />
+      < Abootle />
       < Contact />
-      < Footer /> 
-      <Anim />
-      <Parallax />*/}
-      <Pagey />
+      {/* < Footer /> */}
+
+
     </main >
   );
 }

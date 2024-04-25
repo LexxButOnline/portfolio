@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-a {
+/* a {
     @apply underline hover:text-teal-950
  }
  html {
@@ -12,4 +12,38 @@ a {
   p {
     margin-top: 20px;
     margin-bottom:20px;
+  } */
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    background-color: theme(colors.primary);
+    /* background-color: #FFFFFF; */
+    color: theme(colors.fontcolor);
+    scroll-behavior: smooth;
   }
+  
+  body {
+    font-family: system-ui;
+    margin: 0;
+  }
+  
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
+  }
+  a {
+    @apply no-underline;   
+ }
+ a:hover {
+  color: theme(colors.fontcolor);
+  text-decoration: underline 2px theme(colors.secondary);
+
+}
+  
+ p {
+  margin-top: 20px;
+  margin-bottom:20px;
+} 

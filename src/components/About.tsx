@@ -11,8 +11,8 @@ const textVariants: Variants = {
         visibility: "visible",
         opacity: 1,
         transition: {
-            duration: 0.5,
-            delay: 0.1
+            duration: 1,
+            delay: 0.4
         },
     }
 };
@@ -20,9 +20,9 @@ const textVariants: Variants = {
 export default function About() {
     return (
         <section id="about">
-            {/* <Intro /> */}
-            <div className="container mx-auto flex mt-80  md:flex-row flex-col gap-2 rounded-sm  border-secondary border-4 ">
-                <div className="bg-secondary basis-1/3 ">
+
+            <div className="container h-dvh mx-auto flex md:flex-row flex-col gap-2 rounded-sm  border-secondary border-4 ">
+                <div className="bg-secondary h-96 w-80 rounded-3xl">
                     <motion.div initial="offscreen"
                         whileInView="onscreen"
                         viewport={{ once: true, amount: "all" }} variants={textVariants}
