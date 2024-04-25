@@ -7,8 +7,8 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 
 
-const Schmorp = () => {
-    const transitionVariants: Variants = {
+const Tile = () => {
+    const enterVariants: Variants = {
         start: {
             visibility: "hidden",
             opacity: 0
@@ -23,25 +23,56 @@ const Schmorp = () => {
         }
     };
 
+    const transitionVariants: Variants = {
+        start: {
+            x: "-100%",
+            opacity: 0
+        },
+        anim: {
+            x: "0",
+            opacity: 1,
+            rotate: "192deg",
+            transition: {
+                duration: 0.8
+            },
+        }
+    };
 
+    const picVariants: Variants = {
+        start: {
+            // x: "100%",
+            opacity: 0,
+            scale: 0
+        },
+        anim: {
+            // x: "0",
+            scale: 1,
+            opacity: 1,
+            rotate: "360deg",
+            transition: {
+                duration: 0.8
+            },
+        }
+    };
 
 
     return (
         // <div className="text-secondary text-2xl p-10 md:text-4xl xl:text-8xl border-2 border-fontcolor border-dashed font-bold tracking-[-0.05em]">
-        <motion.div variants={transitionVariants} initial="start" whileInView="anim">
-            <div className="text-secondar relative text-4xl md:text-8xl font-bold tracking-[-0.05em] ">
-                <div className="bg-tertiary invisible md:visible h-[300px] w-[400px] rotate-6 bottom-[0%] absolute -z-10"></div>
-                <div className="w-full hidden md:block -ml-2"><img src="./lexx_md.png" /></div>
-                <div className="w-3/4 block md:hidden ml-[12%]"><img src="./lexx_sm.png" /></div>
+        <div>
+            <div className="relative inline-block text-4xl md:text-8xl font-bold tracking-[-0.05em] ">
+                <motion.div variants={transitionVariants} initial="start" whileInView="anim" className="bg-tertiary invisible rounded-3xl md:visible h-[300px] w-[400px] bottom-32 rotate-12 left-8 absolute -z-10" ></motion.div>
+                <motion.div variants={picVariants} initial="start" whileInView="anim" className="w-full hidden md:block -ml-2"><img className="rounded-lg " src="./lexx_md.png" /></motion.div>
+                <motion.div variants={picVariants} initial="start" whileInView="anim" className="w-3/4 block md:hidden ml-[12%]"><img className="rounded-lg " src="./lexx_sm.png" /></motion.div>
             </div>
 
             {/* <div className="text-secondary pt-6 text-5xl  font-bold tracking-[-0.05em] ">I am a...</div> */}
-            <div className="text-fontcolor pt-4 text-center text-4xl  font-bold tracking-[-0.05em] ">
-                I am <Ima delay={4} />
+            <motion.div variants={enterVariants} initial="start" whileInView="anim">
+                <div className="text-fontcolor pt-0 md:pt-6 text-center text-2xl md:text-4xl font-bold tracking-[-0.05em] ">
+                    I am <Ima delay={4} />
 
-            </div>
-        </motion.div >
-        // </div>
+                </div>
+            </motion.div >
+        </div>
     )
 }
 
@@ -70,8 +101,8 @@ export default function Abootle() {
 
     return (
         <section id="about">
-            <div className="flex flex-col items-center overflow-hidden justify-center  mx-auto h-dvh ">
-                <div>< Schmorp /></div>
+            <div className="flex overflow-visible flex-col items-center pt-10 md:pt-20 justify-center  mx-auto h-dvh ">
+                <div>< Tile /></div>
                 <div className="h-10"></div>
                 <motion.div className="h-20 text-fontcolor" variants={moveText} initial="start" animate="end">
                     <motion.a href="#contact" initial={{ opacity: 0.6 }} whileHover={{ opacity: 1 }}>

@@ -11,7 +11,7 @@ export default function AnimImaText({ delay }: ImaProps) {
   const textIndex = useMotionValue(0);
   const texts = [
     "a software developer.",
-    "fascinated with UX/UI.",
+    "fascinated by UX/UI.",
     "an advocate for DEI.",
     "a Java developer.",
     "always learning.",
