@@ -57,7 +57,17 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <form
+                        {/* Start comment out later */}
+                        <div className="flex flex-col justify-center items-center"><h2 className=" text-4xl font-medium title-font">
+                            Contact Me
+                        </h2>
+                            <p className="mt-1 mb-5 font-medium text-lg">
+                                <span className="text-tertiary mr-2"><FontAwesomeIcon size="lg" icon={faCode} /></span>Let's build  something <span className=" underline decoration-secondary decoration-2 font-bold">amazing</span> together!
+                            </p>
+                        </div>
+                        {/* End comment out later */}
+
+                        {/* <form
                             data-netlify="true"
                             name="contact"
                             onSubmit={handleSubmit}
@@ -111,7 +121,7 @@ export default function Contact() {
                                 className="bg-gray-800 border border-gray-700 py-2 px-6 focus:border-1 focus:border-white hover:bg-secondary hover:text-primary hover:ring-1 hover:ring-white rounded text-lg">
                                 Submit
                             </button>
-                        </form>
+                        </form> */}
 
                     </div>
 
