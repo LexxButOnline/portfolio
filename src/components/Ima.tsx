@@ -3,22 +3,20 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect } from "react";
 import CursorBlinker from "./CursorBlinker";
 
-export interface IRedoAnimTextProps {
+export interface ImaProps {
   delay: number;
 }
 
-export default function RedoAnimText({ delay }: IRedoAnimTextProps) {
+export default function AnimImaText({ delay }: ImaProps) {
   const textIndex = useMotionValue(0);
   const texts = [
-    "I am writing to you because I want a job.",
-    "I am the best candidate for this job.",
-    "In my grand adventure as a seasoned designer...",
-    "Knock knock! Who's there? Your new employee!",
-    "Walking the tightrope balance of project management...",
-    "I find myself compelled to express my interest due to...",
-    "My pen (or should I say, keyboard) is at work today because...",
-    "Inspired by the alluring challenge in the job posting, I am writing...",
-    "Stirred to my keyboard by the tantalizing nature of the role…"
+    "a software developer.",
+    "fascinated with UX/UI.",
+    "an advocate for DEI.",
+    "a Java developer.",
+    "always learning.",
+    "a web developer.",
+    "constantly creating."
   ];
 
   const baseText = useTransform(textIndex, (latest) => texts[latest] || "");
@@ -33,7 +31,7 @@ export default function RedoAnimText({ delay }: IRedoAnimTextProps) {
     animate(count, 60, {
       type: "tween",
       delay: delay,
-      duration: 1,
+      duration: 2,
       ease: "easeIn",
       repeat: Infinity,
       repeatType: "reverse",
@@ -51,8 +49,7 @@ export default function RedoAnimText({ delay }: IRedoAnimTextProps) {
         }
       }
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <div><motion.span className="inline">{displayText}</motion.span><CursorBlinker /></div>;
+  return <div className="inline"><motion.span>{displayText}</motion.span><CursorBlinker /></div>;
 }

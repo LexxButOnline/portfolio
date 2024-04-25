@@ -5,7 +5,7 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Intro from "@/components/Intro";
 // import About from "@/components/About";
-import Abootle from "@/components/Abootle";
+import About from "@/components/About";
 import Contact from "@/components/Contact";
 
 
@@ -18,7 +18,7 @@ export default function Page() {
     <main>
       < Navbar />
       < Intro />
-      < Abootle />
+      < About />
       < Contact />
       {/* < Footer /> */}
 
