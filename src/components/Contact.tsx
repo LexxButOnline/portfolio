@@ -18,7 +18,7 @@ export default function Contact() {
             .join("&");
     }
 
-    function handleSubmit(e: any) {
+    function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
         fetch("/", {
             method: "POST",
