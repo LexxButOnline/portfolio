@@ -61,6 +61,7 @@ export default function Contact() {
                             data-netlify="true"
                             name="contact"
                             onSubmit={handleSubmit}
+                            method="POST"
                             className="basis-1/2 px-4 py-2">
                             <h2 className=" text-4xl font-medium title-font">
                                 Contact Me
