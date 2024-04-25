@@ -4,7 +4,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
     return (
-        <header className="bg-[#010101] border-b-2  border-b-zinc-900 border-solid rounded-lg  md:sticky top-0 z-10">
+        <header className="bg-alt border-b-2  border-b-zinc-900 border-solid rounded-lg  md:sticky top-0 z-10">
             <div className="container mx-auto flex flex-wrap text-secondary p-5 flex-col md:flex-row items-center">
                 <a href="#intro" className="ml-3 title-font  font-medium mb-4 md:mb-0 text-xl">
                     Lexx Chaplin
@@ -22,8 +22,8 @@ export default function Navbar() {
                 </nav>
                 <a
                     href="#contact"
-                    className="inline-flex items-center font-medium bg-primary border-2 border-zinc-800 py-1 px-3 focus:outline-none hover:border-l-fontcolor  rounded text-base mt-4 md:mt-0">
-                    Contact
+                    className="inline-flex items-center font-medium bg-primary border-2 border-l-tertiary border-alt py-1 px-3 focus:outline-none   hover:border-l-alt text-fontcolor rounded text-base mt-4 md:mt-0">
+                    Get In Touch
                     <FontAwesomeIcon icon={faArrowRight} className="w-4 h-4 ml-1" />
                 </a>
             </div>

@@ -2,9 +2,8 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faCode } from '@fortawesome/free-solid-svg-icons';
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import Footer from "./Footer";
 
 export default function Contact() {
     const [name, setName] = React.useState("");
@@ -32,9 +31,9 @@ export default function Contact() {
 
     return (
         <section id="contact" >
-            <div className="h-dvh pt-48" >
+            <div className="h-dvh pt-0 md:pt-44" >
 
-                <div className="container mx-auto bg-primary border-secondary border-4 rounded-sm">
+                <div className="container mx-auto bg-alt border-zinc-900 border-0 md:border-2 rounded-2xl">
                     <div className="flex p-6 md:flex-row flex-col gap-2">
 
                         <div className="basis-1/2  p-6 place-content-center">
@@ -43,7 +42,7 @@ export default function Contact() {
                                     <FontAwesomeIcon icon={faEnvelope} size="8x" />
                                 </div>
                                 <div className="content-center px-4">
-                                    <span className="font-bold">Email:</span> <br />
+                                    <span className="border-l-2 pl-2 mb-4 border-l-secondary font-bold">Email:</span> <br />
                                     <span className="font-medium">hello@lexxchaplin.com</span>
                                 </div>
                             </div>
@@ -52,7 +51,7 @@ export default function Contact() {
                                     <FontAwesomeIcon icon={faLinkedin} size="9x" />
                                 </div>
                                 <div className="content-center px-4">
-                                    <span className="font-bold">LinkedIn:</span> <br />
+                                    <span className="border-l-2 pl-2 border-l-tertiary font-bold">LinkedIn:</span> <br />
                                     <a href="https://www.linkedin.com/in/lexxchaplin/" >linkedin.com/in/lexxchaplin</a>
                                 </div>
                             </div>
@@ -62,12 +61,12 @@ export default function Contact() {
                             name="contact"
                             onSubmit={handleSubmit}
                             className="basis-1/2 px-4 py-2">
-                            <h2 className=" sm:text-4xl text-3xl mb-1 font-medium title-font">
+                            <h2 className=" text-4xl font-medium title-font">
                                 Contact Me
                             </h2>
-                            <p className="leading-relaxed mb-5">
-                                Don't hesitate to reach out if you have a question or would like to work together!
-                            </p>
+                            <div className="mt-1 mb-5 font-medium text-lg">
+                                <span className="text-tertiary mr-2"><FontAwesomeIcon size="lg" icon={faCode} /></span>Let's build  something <span className=" underline decoration-secondary decoration-2 font-bold">amazing</span> together!
+                            </div>
                             <div className="relative mb-4">
                                 <label htmlFor="name" className="leading-7 text-sm ">
                                     Name
