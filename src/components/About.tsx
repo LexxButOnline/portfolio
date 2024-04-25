@@ -1,67 +1,85 @@
 import React from "react";
 // import Intro from "@/components/Intro";
+import Ima from "@/components/Ima";
 import { motion, Variants } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-const textVariants: Variants = {
-    offscreen: {
-        visibility: "hidden",
-        opacity: 0
-    },
-    onscreen: {
-        visibility: "visible",
-        opacity: 1,
-        transition: {
-            duration: 1,
-            delay: 0.4
+
+
+const Schmorp = () => {
+    const transitionVariants: Variants = {
+        start: {
+            visibility: "hidden",
+            opacity: 0
         },
-    }
-};
+        anim: {
+            visibility: "visible",
+            opacity: 1,
+            transition: {
+                duration: 1,
+                delay: 0.4
+            },
+        }
+    };
 
-export default function About() {
+
+
+
+    return (
+        // <div className="text-secondary text-2xl p-10 md:text-4xl xl:text-8xl border-2 border-fontcolor border-dashed font-bold tracking-[-0.05em]">
+        <motion.div variants={transitionVariants} initial="start" whileInView="anim">
+            <div className="text-secondar relative text-4xl md:text-8xl font-bold tracking-[-0.05em] ">
+                <div className="bg-tertiary invisible md:visible h-[300px] w-[400px] rotate-6 bottom-[0%] absolute -z-10"></div>
+                <div className="w-full hidden md:block -ml-2"><img src="./lexx_md.png" /></div>
+                <div className="w-3/4 block md:hidden ml-[12%]"><img src="./lexx_sm.png" /></div>
+            </div>
+
+            {/* <div className="text-secondary pt-6 text-5xl  font-bold tracking-[-0.05em] ">I am a...</div> */}
+            <div className="text-fontcolor pt-4 text-center text-4xl  font-bold tracking-[-0.05em] ">
+                I am <Ima delay={4} />
+
+            </div>
+        </motion.div >
+        // </div>
+    )
+}
+
+
+
+export default function Abootle() {
+
+    const moveText = {
+
+        start: {
+            opacity: 0,
+            scale: 0,
+        },
+        end: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+                delay: 0.6,
+                duration: 1
+            }
+
+        }
+    }
+
+    //border-2 border-tertiary
+
     return (
         <section id="about">
-
-            <div className="container h-dvh mx-auto flex md:flex-row flex-col gap-2 rounded-sm  border-secondary border-4 ">
-                <div className="bg-secondary h-96 w-80 rounded-3xl">
-                    <motion.div initial="offscreen"
-                        whileInView="onscreen"
-                        viewport={{ once: true, amount: "all" }} variants={textVariants}
-                    >      <img
-                            className="object-cover object-center scale-75"
-                            alt="hero"
-                            src="./lexxtoon.png"
-                        />
-                    </motion.div>
-                </div>
-                <div className="basis-2/3 rounded-sm py-8 px-10 flex">
-                    <div className="m-auto">
-
-
-                        Hi. I'm Lexx
-
-                        {/* <h1 className="inline-block mb-6">
-                            <Anim />
-                        </h1> */}
-                        <p className="mb-4 leading-relaxed">
-                            I'm a software developer with 10 years of experience in Java development within the insurance industry.
-                        </p >
-                        <p className="mb-4 leading-relaxed">
-                            Throughout my time, I have dabbled in many different technologies, thriving on my ability to quickly grasp new concepts.<br />
-                            I have worked mainly on the backend side of things the past few years, but have also enjoyed experience as a fullstack developer.
-                        </p>
-                        <p className="mb-4 leading-relaxed">
-                            I have always enjoyed frontend web development and have recently found myself drawn to UX/UI work.<br />
-                            At the moment, I am excited to be reacquainting myself with the frontend side of things - turning my focus to modern front-end technologies and design principles.
-                        </p>
-                        <p className="mb-4 leading-relaxed">
-                            I'm eager to draw on my diverse skillset, and my resourcefulness, to create meaningful solutions in a frontend or fullstack role (or a backend role, if I am enthusiastic about the company/work)!
-                        </p>
-                        <p className="font-medium text-xl leading-relaxed">
-                            Let's build something amazing together!
-                        </p>
-                    </div>
-                </div>
+            <div className="flex flex-col items-center overflow-hidden justify-center  mx-auto h-dvh ">
+                <div>< Schmorp /></div>
+                <div className="h-10"></div>
+                <motion.div className="h-20 text-fontcolor" variants={moveText} initial="start" animate="end">
+                    <motion.a href="#contact" initial={{ opacity: 0.6 }} whileHover={{ opacity: 1 }}>
+                        <FontAwesomeIcon icon={faChevronDown} size="6x" />
+                    </motion.a>
+                </motion.div>
             </div>
-        </section>
-    )
+
+        </section >
+    );
 }
