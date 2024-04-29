@@ -7,7 +7,7 @@ import Intro from "@/components/Intro";
 // import About from "@/components/About";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-
+import Projects from "@/components/Projects";
 
 
 
@@ -19,6 +19,7 @@ export default function Page() {
       < Navbar />
       < Intro />
       < About />
+      < Projects />
       < Contact />
       {/* < Footer /> */}
 

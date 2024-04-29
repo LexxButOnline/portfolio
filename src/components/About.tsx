@@ -80,23 +80,6 @@ const Tile = () => {
 
 export default function Abootle() {
 
-    const moveText = {
-
-        start: {
-            opacity: 0,
-            scale: 0,
-        },
-        end: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-                delay: 0.6,
-                duration: 1
-            }
-
-        }
-    }
-
     //border-2 border-tertiary
 
     return (
@@ -104,11 +87,11 @@ export default function Abootle() {
             <div className="flex overflow-visible flex-col items-center pt-10 md:pt-20 justify-center  mx-auto h-dvh ">
                 <div>< Tile /></div>
                 <div className="h-10"></div>
-                <motion.div className="h-20 text-fontcolor" variants={moveText} initial="start" animate="end">
-                    <motion.a href="#contact" initial={{ opacity: 0.6 }} whileHover={{ opacity: 1 }}>
-                        <FontAwesomeIcon icon={faChevronDown} size="6x" />
-                    </motion.a>
-                </motion.div>
+
+                <motion.a href="#projects" initial={{ opacity: 0.6 }} whileHover={{ opacity: 1 }}>
+                    <FontAwesomeIcon icon={faChevronDown} size="6x" />
+                </motion.a>
+
             </div>
 
         </section >

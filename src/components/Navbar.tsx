@@ -15,10 +15,10 @@ export default function Navbar() {
                     </a>
                     {/* <a href="#skills" className="mr-5 ">
                         Skills
-                    </a>
+                    </a> */}
                     <a href="#projects" className="mr-5">
                         Projects
-                    </a> */}
+                    </a>
                 </nav>
                 <a
                     href="#contact"
