@@ -31,7 +31,7 @@ export default function Contact() {
 
     return (
         <section id="contact" >
-            <div className="h-dvh pt-0 md:pt-44" >
+            <div className="h-dvh pt-10 md:pt-44" >
 
                 <div className="container mx-auto bg-alt border-zinc-900 border-0 md:border-2 rounded-2xl">
                     <div className="flex p-6 md:flex-row flex-col gap-2">
