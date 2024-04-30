@@ -13,9 +13,6 @@ export default function Navbar() {
                     <a href="#about" className="mr-5 ">
                         About
                     </a>
-                    {/* <a href="#skills" className="mr-5 ">
-                        Skills
-                    </a> */}
                     <a href="#projects" className="mr-5">
                         Projects
                     </a>

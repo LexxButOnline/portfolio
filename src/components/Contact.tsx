@@ -6,28 +6,28 @@ import { faEnvelope, faCode } from '@fortawesome/free-solid-svg-icons';
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
 export default function Contact() {
-    const [name, setName] = React.useState("");
-    const [email, setEmail] = React.useState("");
-    const [message, setMessage] = React.useState("");
+    // const [name, setName] = React.useState("");
+    // const [email, setEmail] = React.useState("");
+    // const [message, setMessage] = React.useState("");
 
-    function encode(data: any) {
-        return Object.keys(data)
-            .map(
-                (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-            )
-            .join("&");
-    }
+    // function encode(data: any) {
+    //     return Object.keys(data)
+    //         .map(
+    //             (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+    //         )
+    //         .join("&");
+    // }
 
-    function handleSubmit(e: React.FormEvent) {
-        e.preventDefault();
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", name, email, message }),
-        })
-            .then(() => alert("Message sent!"))
-            .catch((error) => alert(error));
-    }
+    // function handleSubmit(e: React.FormEvent) {
+    //     e.preventDefault();
+    //     fetch("/", {
+    //         method: "POST",
+    //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //         body: encode({ "form-name": "contact", name, email, message }),
+    //     })
+    //         .then(() => alert("Message sent!"))
+    //         .catch((error) => alert(error));
+    // }
 
     return (
         <section id="contact" >
@@ -125,9 +125,6 @@ export default function Contact() {
 
                     </div>
 
-                </div>
-                <div className="container mx-auto px-10  mt-10 py-2 text-center text-zinc-500 text-xs md:text-sm bg-primary">
-                    <span className="font-bold">Notice:</span> This site is an active work in progress. Please pardon any bumps in the road during construction, and check back for more soon! Thank you!
                 </div>
             </div>
         </section>

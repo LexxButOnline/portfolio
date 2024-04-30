@@ -5,8 +5,6 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 
 
-
-
 const HelloThere = () => {
     useEffect(() => {
         myAnimation();
@@ -14,7 +12,6 @@ const HelloThere = () => {
     const [scope, animate] = useAnimate();
 
     async function myAnimation() {
-
         await animate(scope.current, { opacity: ['0%', '100%'], scale: [3, 1] }, {
             duration: 1, delay: 0.6,
             type: "spring",
@@ -38,18 +35,11 @@ const HelloThere = () => {
         );
     }
 
-
-
-
     return (
-        // <div className="text-secondary text-2xl p-10 md:text-4xl xl:text-8xl border-2 border-fontcolor border-dashed font-bold tracking-[-0.05em]">
-        <motion.div className="text-secondary text-4xl  opacity-0 md:text-8xl font-bold tracking-[-0.05em]" ref={scope}>
+        <motion.div className="text-secondary text-4xl opacity-0 md:text-8xl font-bold tracking-[-0.05em]" ref={scope}>
             <div >Hi.</div>
             <div>I'm Lexx.</div>
         </motion.div >
-
-
-        // </div>
     )
 }
 

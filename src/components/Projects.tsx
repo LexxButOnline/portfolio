@@ -23,7 +23,6 @@ export default function Projects() {
                 <motion.a href="#contact" initial={{ opacity: 0.6 }} whileHover={{ opacity: 1 }}>
                     <FontAwesomeIcon icon={faChevronDown} size="6x" />
                 </motion.a>
-
             </div>
         </section>
     );
