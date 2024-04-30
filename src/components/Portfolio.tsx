@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-export default function Projects() {
+export default function Portfolio() {
 
     return (
-        <section id="projects">
+        <section id="portfolio">
             <div className="h-dvh text-center pt-10 lg:pt-44" >
 
                 <div className="container flex flex-col items-center justify-center  mx-auto bg-alt border-zinc-900 border-0 md:border-2 rounded-2xl">

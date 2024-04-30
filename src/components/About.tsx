@@ -75,7 +75,7 @@ export default function About() {
             <div className="flex overflow-visible flex-col items-center pt-10 md:pt-20 justify-center  mx-auto h-dvh ">
                 <div>< AboutTile /></div>
                 <div className="h-10"></div>
-                <motion.a href="#projects" initial={{ opacity: 0.6 }} whileHover={{ opacity: 1 }}>
+                <motion.a href="#portfolio" initial={{ opacity: 0.6 }} whileHover={{ opacity: 1 }}>
                     <FontAwesomeIcon icon={faChevronDown} size="6x" />
                 </motion.a>
             </div>
